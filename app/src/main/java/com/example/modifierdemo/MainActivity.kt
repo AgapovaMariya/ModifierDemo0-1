@@ -34,8 +34,13 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun DemoScreen(modifier: Modifier = Modifier) {
+    val my_modifier = modifier
+        .border(width = 2.dp, color = Color.Black)
+        .padding(all = 10.dp)
+
     Text(
         "Hello Compose",
+        modifier = my_modifier,
         fontSize = 40.sp,
         fontWeight = FontWeight.Bold
     )
@@ -48,6 +53,7 @@ fun DefaultPreview() {
     }
 }
 
-val modifier = Modifier
+/*val modifier = Modifier
     .padding(all = 10.dp) // Добавляет отступ в 10 пикселей со всех четырёх сторон
-    .border(width = 2.dp, color = Color.Black) // Рисует чёрную рамку шириной 2 пикселя
+    .border(width = 2.dp, color = Color.Black) // Рисует чёрную рамку шириной 2 пикселя */
+
