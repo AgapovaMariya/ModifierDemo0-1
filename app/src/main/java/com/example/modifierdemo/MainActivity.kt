@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.modifierdemo.ui.theme.ModifierDemoTheme
 
@@ -44,3 +45,5 @@ fun DefaultPreview() {
         DemoScreen()
     }
 }
+
+val modifier = Modifier.padding(all = 10.dp) // Добавляет отступ в 10 пикселей со всех четырёх сторон
