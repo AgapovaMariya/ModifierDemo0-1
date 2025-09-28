@@ -59,10 +59,11 @@ fun DefaultPreview() {
     .padding(all = 10.dp) // Добавляет отступ в 10 пикселей со всех четырёх сторон
     .border(width = 2.dp, color = Color.Black) // Рисует чёрную рамку шириной 2 пикселя */
 
-@Composable
-fun CustomImage(image: Int) {
+@Composable // Параметр модификатора должен быть необязательным, чтобы функцию можно было вызвать без него
+fun CustomImage(image: Int, modifier: Modifier = Modifier) {
     Image(
         painter = painterResource(image),
-        contentDescription = null
+        contentDescription = null,
+        modifier
     )
 }
