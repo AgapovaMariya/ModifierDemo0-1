@@ -12,11 +12,14 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -50,13 +53,18 @@ fun DemoScreen(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Center // Центрирование по вертикали
     ) {
         Text(
-            "Hello Compose",
+            "TANK GIRL",
             my_modifier,
             fontSize = 40.sp, // Размер шрифта
             fontWeight = FontWeight.Bold // Жирный шрифт
         )
-        Spacer(Modifier.height(16.dp)) // Отступ от строки к изображению
-        CustomImage(R.drawable.movie)
+        Spacer(Modifier.height(10.dp)) // Отступ от строки к изображению
+        CustomImage(R.drawable.movie,
+            Modifier
+                .padding(10.dp) // Отступ вокруг изображения
+                .width(270.dp) // Ширина изображения
+                .clip(shape = RoundedCornerShape(30.dp)) // Обрезает и закругляет углы
+        )
     }
 }
 @Preview(showBackground = true)
