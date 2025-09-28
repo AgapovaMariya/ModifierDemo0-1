@@ -54,7 +54,7 @@ fun DemoScreen(modifier: Modifier = Modifier) {
     ) {
         Text(
             "TANK GIRL",
-            my_modifier,
+            my_modifier.then(secondModifier),
             fontSize = 40.sp, // Размер шрифта
             fontWeight = FontWeight.Bold // Жирный шрифт
         )
@@ -78,6 +78,7 @@ fun DefaultPreview() {
 /*val modifier = Modifier
     .padding(all = 10.dp) // Добавляет отступ в 10 пикселей со всех четырёх сторон
     .border(width = 2.dp, color = Color.Black) // Рисует чёрную рамку шириной 2 пикселя */
+val secondModifier = Modifier.height(100.dp)
 
 @Composable // Параметр модификатора должен быть необязательным, чтобы функцию можно было вызвать без него
 fun CustomImage(image: Int, modifier: Modifier = Modifier) {
